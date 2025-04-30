@@ -21,6 +21,7 @@ import UserSettings from "./user_settings.svg?react";
 import Users from "./users.svg?react";
 import VolumeOff from "./volume_off.svg?react";
 import VolumeOn from "./volume_on.svg?react";
+import CbcLogo from "./rgb_gem-col-coul.png"
 
 export const MicMuted = () => <MicMute />;
 
@@ -67,3 +68,19 @@ export const CopyIcon = () => <Copy />;
 export const ShareIcon = () => <Share />;
 
 export const CheckIcon = () => <Check />;
+
+// Define an interface for the props
+interface CbcLogoIconProps {
+    width?: number;  // Optional, defaults to 100
+    height?: number; // Optional, defaults to 100
+    alt?: string;    // Optional, defaults to "CBC Logo"
+  }
+
+export const CbcLogoIcon = ({ width = 45, height = 45, alt = "CBC Logo" }: CbcLogoIconProps) => (
+<img
+    src={CbcLogo} // Use the imported image path here
+    alt={alt}
+    width={width} // Assign the width prop value
+    height={height} // Assign the height prop value
+/>
+);

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { FC, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { HeadsetIcon } from "../assets/icons/icon.tsx";
+import { HeadsetIcon, CbcLogoIcon } from "../assets/icons/icon.tsx";
 import { backgroundColour } from "../css-helpers/defaults.ts";
 import { useGlobalState } from "../global-state/context-provider.tsx";
 import { useAudioCue } from "./production-line/use-audio-cue.ts";
@@ -74,6 +74,7 @@ export const Header: FC = () => {
         <HomeButton onClick={returnToRoot}>
           <HeadsetIcon />
           Intercom
+          <CbcLogoIcon />
         </HomeButton>
       </HeaderWrapper>
       {confirmExitModalOpen && (
