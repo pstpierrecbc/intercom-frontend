@@ -9,6 +9,7 @@ import { PageHeader } from "../page-layout/page-header.tsx";
 import { AddIcon, EditIcon } from "../../assets/icons/icon.tsx";
 import { PrimaryButton } from "./form-elements.tsx";
 import { isMobile } from "../../bowser.ts";
+// import { MarkdownPreview } from "./markdown-preview.tsx";
 
 const HeaderButton = styled(PrimaryButton)`
   margin-left: 1rem;
@@ -84,9 +85,13 @@ export const ProductionsListContainer = () => {
           </>
         )}
       </PageHeader>
-      {!!productions?.productions.length && (
-        <ProductionsList productions={productions.productions} error={error} />
-      )}
+      <div className="two-column-layout">
+        {!!productions?.productions.length && (
+          <ProductionsList productions={productions.productions} error={error} />
+        )}   
+        {/* <MarkdownPreview /> */}
+      </div>
+      
     </>
   );
 };

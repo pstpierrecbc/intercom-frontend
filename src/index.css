@@ -198,3 +198,22 @@ strong {
   @media only screen and (min-width: 768px) {
   }
 */
+
+
+/* CBC addition */
+
+.two-column-layout {
+  display: flex;
+  gap: 1rem;
+}
+
+.two-column-layout > * {
+  flex: 1;
+}
+
+.markdown-preview {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background: #fafafa;
+  overflow-y: auto;
+}
